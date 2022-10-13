@@ -350,6 +350,47 @@ li {
 /*=================================
   month special styling ends here
 =================================*/
+/*=================================
+  about styling starts here
+=================================*/
+.about {
+  position: relative;
+}
+
+.about .wrapper {
+  padding: 83px 0 300px;
+}
+
+.about-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about-content {
+  width: 46%;
+  color: #767676;
+  text-align: center;
+}
+
+.about-content .main-heading {
+  margin: 0 0 104px;
+  color: #767676;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.about-para {
+  font-size: 33px;
+  text-align: center;
+  line-height: 42px;
+}
+/*=================================
+  about styling ends here
+=================================*/
 
 
 
