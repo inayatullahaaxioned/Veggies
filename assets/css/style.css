@@ -118,7 +118,10 @@ li {
   position: fixed;
   z-index: 10;
   top: 0;
-  right: 42px;
+  left: 0;
+  right: 0;
+  padding: 0 42px;
+  background-color: #e9eaec;
 }
 
 .header .wrapper {
@@ -232,7 +235,43 @@ li {
 /*=================================
   turnip section styling starts here
 =================================*/
+.turnip {
+  background-color: #F3C30F;
+}
 
+.turnip .wrapper {
+  padding: 125px 0 135px;
+}
+
+.bowl-img {
+  max-width: 108px;
+}
+
+.turnip-list {
+  display: flex;
+}
+
+.turnip-item {
+  margin: 0 22px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.turnip-heading {
+  margin: 28px 0;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.turnip-item p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #474747;
+}
 /*=================================
   turnip section  styling ends here
 =================================*/
