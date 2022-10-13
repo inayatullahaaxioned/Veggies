@@ -282,7 +282,7 @@ li {
   padding: 80px 0;
 }
 
-.month-special .main-heading {
+.main-heading {
   padding: 0 0 ;
   margin: 0 0 70px;
   color: #767676;
@@ -390,6 +390,77 @@ li {
 }
 /*=================================
   about styling ends here
+=================================*/
+/*=================================
+  menu styling starts here
+=================================*/
+.menu .wrapper {
+  padding: 85px 0;
+}
+
+.tab-list {
+  width: 35%;
+  margin-bottom: 60px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.tab-item a {
+  margin: 0 15px;
+  color: #767676;
+  font-size: 18px;
+}
+
+.menu-list {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+
+.menu-item {
+  margin-bottom: 60px;
+  flex-basis: 48%;
+  position: relative;
+  color: #767676;
+}
+
+.name-price .item-name {
+  padding: 0;
+  display: inline-block;
+}
+
+.item-name {
+  position: relative;
+}
+
+.item-anc {
+  color: #767676;
+  font-size: 20px;
+}
+
+.item-name::after {
+  content: "";
+  width: 97%;
+  display: block;
+  border-bottom: 2px dotted #767676;
+  float: left;
+  position: absolute;
+  left: 102%;
+  bottom: 5px;
+}
+
+.price {
+  position: absolute;
+  right: 3%;
+}
+
+.item-brief {
+  font-style: italic;
+  text-transform: lowercase;
+}
+/*=================================
+  menu styling ends here
 =================================*/
 
 
