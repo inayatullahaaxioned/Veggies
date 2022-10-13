@@ -114,8 +114,15 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 42px;
+}
+
 .header .wrapper {
-  padding: 22px 0; 
+  padding: 22px 0;
 }
 
 .bar {
@@ -155,9 +162,79 @@ li {
 /*=================================
   Header styling ends here
 =================================*/  
-
 /*=================================
   main styling starts here
+=================================*/
+/*=================================
+  banner styling starts here
+=================================*/
+.banner .wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-img {
+  position: relative;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.banner-heading {
+  padding: 325px 0 385px;
+  margin: 0 5.5% 0;
+  position: absolute;
+  top: 0;
+  font-size: 42px;
+  width: 36%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.next-section {
+  width: 100%;
+  position: absolute;
+  bottom: 45px;
+  text-align: center;
+}
+
+.next-btn {
+  display: inline-block;
+  text-indent: -9999px;
+  
+}
+
+.angle-down::before {
+  content: "\f103" ;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 28px;
+  font-family: "FontAwesome";
+  float: left;
+  color: #fff;
+  text-indent: 0;
+}
+/*=================================
+  banner styling ends here
+=================================*/
+/*=================================
+  turnip section styling starts here
+=================================*/
+
+/*=================================
+  turnip section  styling ends here
 =================================*/
 
 
