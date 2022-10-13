@@ -275,6 +275,81 @@ li {
 /*=================================
   turnip section  styling ends here
 =================================*/
+/*=================================
+  month speical styling starts here
+=================================*/
+.month-special .wrapper {
+  padding: 80px 0;
+}
+
+.month-special .main-heading {
+  padding: 0 0 ;
+  margin: 0 0 70px;
+  color: #767676;
+  font-size: 44px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.special-img {
+  max-width: 202px;
+}
+
+.special-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.special-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -340px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #686B71;
+}
+
+.special-item:hover .item-content{
+  bottom: 0;
+  transition: all .7s ease-in-out;
+}
+
+.item-name {
+  padding: 0 0 20px;
+  position: relative;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.special-list .item-name:after {
+  content: '';
+  width: 80px;
+  height: 3px;
+  background: gray;
+  position: absolute;
+  bottom: -4px;
+  left: 15%;
+  margin: 0 auto;
+}
+
+.item-para {
+  padding: 25px 0;
+}
+/*=================================
+  month special styling ends here
+=================================*/
 
 
 
