@@ -159,9 +159,6 @@ li {
 border: 1px solid #000;
 }
 
-.nav-item:hover {
-  color: #855050;
-}
 .nav-list {
   display: flex;
 }
@@ -427,6 +424,11 @@ border: 1px solid #000;
   color: #767676;
 }
 
+.name-price {
+  display: flex;
+  justify-content: space-between;
+}
+
 .name-price .item-name {
   padding: 0;
   display: inline-block;
@@ -441,21 +443,25 @@ border: 1px solid #000;
   font-size: 20px;
 }
 
-.item-name::after {
+.dotted {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+
+.dotted::after {
   content: "";
-  width: 97%;
-  display: none;
+  width: 275px;
   border-bottom: 2px dotted #767676;
   float: left;
   position: absolute;
-  left: 102%;
-  bottom: 5px;
+  top: 20px;
+  left: -135px;
 }
 
-/* .price {
-  position: absolute;
-  right: 3%;
-} */
+.price {
+  display: inline-block;
+}
 
 .item-brief {
   font-style: italic;
@@ -507,6 +513,7 @@ address {
 }
 
 .contact-anc a {
+  margin-bottom: 5px;
   color: #767676;
   font-size: 17px;
 }
@@ -591,18 +598,42 @@ form {
 
 .footer-para {
   color: #948C98;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .footer-para a {
-  font-size: 20px;
+  color: #FF0000;
+  font-size: 18px;
 }
 
 .footer-para a::before {
   content: "\f004";
+  padding-right: 5px;
   font-family: "FontAwesome";
-  color: red;
+  color: #FF0000;
   float: left;
+}
+
+.social-icon {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.social-icon::before {
+  content: "\f09a";
+  padding: 5px 10px;
+  border: 1px solid #767676;
+  background-color: transparent;
+  color: #767676;
+  font-size: 20px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+  float: left;
+}
+
+.linkedin::before {
+  content: "\f0e1";
+  padding: 5px 8px;
 }
 
  /*=================================
