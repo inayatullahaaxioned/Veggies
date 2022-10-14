@@ -117,9 +117,8 @@ li {
 .header {
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   top: 0;
-  padding: 0 42px;
   background-color: #e9eaec;
 }
 
@@ -157,9 +156,12 @@ li {
 }
 
 .nav-item.active {
-  border: 1px solid #000;
+border: 1px solid #000;
 }
 
+.nav-item:hover {
+  color: #855050;
+}
 .nav-list {
   display: flex;
 }
@@ -174,7 +176,6 @@ li {
 =================================*/
 .banner .wrapper {
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: flex-end;
 }
@@ -192,7 +193,7 @@ li {
 }
 
 .banner-heading {
-  padding: 325px 0 385px;
+  padding: 316px 0 375px;
   margin: 0 5.5% 0;
   position: absolute;
   top: 0;
@@ -443,7 +444,7 @@ li {
 .item-name::after {
   content: "";
   width: 97%;
-  display: block;
+  display: none;
   border-bottom: 2px dotted #767676;
   float: left;
   position: absolute;
@@ -473,15 +474,14 @@ li {
 }
 
 .contact .wrapper {
-  width: 42%;
-  padding: 75px 0 35px;
-  margin: unset;
-  height: 792px;
+  padding: 70px 0 35px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .contact-list {
   display: flex;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
 }
 
 .contact-item {
@@ -490,16 +490,18 @@ li {
 }
 
 .contact-heading {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
   color: #767676;
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 600;
+  text-align: left;
 }
 
 .contact .main-heading {
   padding: 0 0 30px;
 }
+
 address {
   line-height: 25px;
 }
@@ -518,9 +520,50 @@ address {
   bottom: 0;
 }
 
-.contact-heading
+.form-input input,
+.form-input textarea {
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  outline: none;
+}
 
+.form-input {
+  display: flex;
+  gap: 1%;
+}
 
+input[type="text"] {
+  flex-basis: 45%;
+}
+
+input[type="email"] {
+  flex-basis: 45%;
+}
+
+.form-input textarea {
+  width: 100%;
+  resize: none;
+}
+
+input[type="submit"] {
+  padding: 14px 30px;
+  margin: 40px 0 0;
+  border: 1px solid #828284;
+  background-color: transparent;
+  color: #828284;
+  font-size: 18px;
+}
+
+form {
+  text-align: center;
+}
+
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+  font-size: 17px;
+}
 /*=================================
   contact styling ends here
 =================================*/
@@ -531,7 +574,7 @@ address {
   footer styling starts here
 =================================*/
 .footer {
-  position: sticky;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
