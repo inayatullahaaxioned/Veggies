@@ -190,7 +190,7 @@ border: 1px solid #000;
 }
 
 .banner-heading {
-  padding: 316px 0 375px;
+  padding: 23.5% 0 28%;
   margin: 0 5.5% 0;
   position: absolute;
   top: 0;
@@ -366,6 +366,11 @@ border: 1px solid #000;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+}
+
+.about-bg img {
+  height: 100%;
 }
 
 .about-content {
@@ -398,10 +403,10 @@ border: 1px solid #000;
 }
 
 .tab-list {
-  width: 33%;
   margin-bottom: 60px;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
 }
 
 .tab-item a {
@@ -524,7 +529,11 @@ address {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -122px;
+}
+
+.contact-bg img {
+  height: 100%;
 }
 
 .form-input input,
@@ -602,7 +611,7 @@ form {
 }
 
 .footer-para a {
-  color: #FF0000;
+  color: #2A8B6E;
   font-size: 18px;
 }
 
@@ -659,8 +668,10 @@ form {
   }
 
   .send:hover {
-    background-color: #FF0000;
-    color: #fff;
+    background-color: #fff;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+    border-radius: 8px;
     transition: all .4s;
   }
 
@@ -672,5 +683,86 @@ form {
   }
  }  
  /*=================================
- media query for hover effect on desktop starts here
+ media query for hover effect on desktop ends here
+=================================*/ 
+ /*=================================
+ media query for 1024px starts here
+=================================*/ 
+@media only screen and (max-width:1024px) {
+  /* .wrapper { padding: 20px 0;} */
+  .tab-list { width: 100%; }
+  .menu-item { flex-basis: 95%; }
+
+
+}
+ /*=================================
+ media query 1024px ends here
+=================================*/ 
+ /*=================================
+ media query 995px starts here
+=================================*/ 
+@media only screen and (max-width:995px) {
+  .banner-heading { font-size: 30px; }
+
+  .about .wrapper {
+    padding: 15px 0;
+  }
+
+  .about-content .main-heading {
+    margin-bottom: 50px;
+  }
+
+  .about-para { font-size: 22px; }
+}
+ /*=================================
+ media query 995px ends here
+=================================*/ 
+ /*=================================
+ media query 768px starts here
+=================================*/ 
+@media only screen and (max-width:768px) {
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 8px;
+    right: 10px;
+  }
+
+  .hamburger:hover+.nav { right: 0; }
+
+  .nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: -100%;
+    background: #A9A39F;
+    transition: all .3s;
+  }
+
+  .nav-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .hamburger:hover .bar-two { display: none; }
+  .hamburger:hover .bar-one { transform: translateY(3px) rotate(45deg); }
+  .hamburger:hover .bar-three { transform: translateY(-5px) rotate(-45deg); }
+
+  .footer .wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+ /*=================================
+ media query 768px ends here
 =================================*/ 
