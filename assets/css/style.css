@@ -117,9 +117,8 @@ li {
 .header {
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   top: 0;
-  padding: 0 42px;
   background-color: #e9eaec;
 }
 
@@ -157,7 +156,7 @@ li {
 }
 
 .nav-item.active {
-  border: 1px solid #000;
+border: 1px solid #000;
 }
 
 .nav-list {
@@ -174,7 +173,6 @@ li {
 =================================*/
 .banner .wrapper {
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: flex-end;
 }
@@ -192,7 +190,7 @@ li {
 }
 
 .banner-heading {
-  padding: 325px 0 385px;
+  padding: 23.5% 0 28%;
   margin: 0 5.5% 0;
   position: absolute;
   top: 0;
@@ -368,6 +366,11 @@ li {
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+}
+
+.about-bg img {
+  height: 100%;
 }
 
 .about-content {
@@ -400,10 +403,10 @@ li {
 }
 
 .tab-list {
-  width: 33%;
   margin-bottom: 60px;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
 }
 
 .tab-item a {
@@ -426,6 +429,11 @@ li {
   color: #767676;
 }
 
+.name-price {
+  display: flex;
+  justify-content: space-between;
+}
+
 .name-price .item-name {
   padding: 0;
   display: inline-block;
@@ -440,21 +448,25 @@ li {
   font-size: 20px;
 }
 
-.item-name::after {
+.dotted {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+}
+
+.dotted::after {
   content: "";
-  width: 97%;
-  display: block;
+  width: 275px;
   border-bottom: 2px dotted #767676;
   float: left;
   position: absolute;
-  left: 102%;
-  bottom: 5px;
+  top: 20px;
+  left: -135px;
 }
 
-/* .price {
-  position: absolute;
-  right: 3%;
-} */
+.price {
+  display: inline-block;
+}
 
 .item-brief {
   font-style: italic;
@@ -473,15 +485,14 @@ li {
 }
 
 .contact .wrapper {
-  width: 42%;
-  padding: 75px 0 35px;
-  margin: unset;
-  height: 792px;
+  padding: 70px 0 35px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .contact-list {
   display: flex;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
 }
 
 .contact-item {
@@ -490,21 +501,24 @@ li {
 }
 
 .contact-heading {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
   color: #767676;
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 600;
+  text-align: left;
 }
 
 .contact .main-heading {
   padding: 0 0 30px;
 }
+
 address {
   line-height: 25px;
 }
 
 .contact-anc a {
+  margin-bottom: 5px;
   color: #767676;
   font-size: 17px;
 }
@@ -515,12 +529,57 @@ address {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -122px;
 }
 
-.contact-heading
+.contact-bg img {
+  height: 100%;
+}
 
+.form-input input,
+.form-input textarea {
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  outline: none;
+}
 
+.form-input {
+  display: flex;
+  gap: 1%;
+}
+
+input[type="text"] {
+  flex-basis: 45%;
+}
+
+input[type="email"] {
+  flex-basis: 45%;
+}
+
+.form-input textarea {
+  width: 100%;
+  resize: none;
+}
+
+input[type="submit"] {
+  padding: 14px 30px;
+  margin: 40px 0 0;
+  border: 1px solid #828284;
+  background-color: transparent;
+  color: #828284;
+  font-size: 18px;
+}
+
+form {
+  text-align: center;
+}
+
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+  font-size: 17px;
+}
 /*=================================
   contact styling ends here
 =================================*/
@@ -531,7 +590,7 @@ address {
   footer styling starts here
 =================================*/
 .footer {
-  position: sticky;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -548,28 +607,162 @@ address {
 
 .footer-para {
   color: #948C98;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .footer-para a {
-  font-size: 20px;
+  color: #2A8B6E;
+  font-size: 18px;
 }
 
 .footer-para a::before {
   content: "\f004";
+  padding-right: 5px;
   font-family: "FontAwesome";
-  color: red;
+  color: #FF0000;
   float: left;
+}
+
+.social-icon {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+.social-icon::before {
+  content: "\f09a";
+  padding: 5px 10px;
+  border: 1px solid #767676;
+  background-color: transparent;
+  color: #767676;
+  font-size: 20px;
+  font-family: "FontAwesome";
+  text-indent: 0;
+  float: left;
+}
+
+.linkedin::before {
+  content: "\f0e1";
+  padding: 5px 8px;
 }
 
  /*=================================
   footer styling ends here
 =================================*/ 
+ /*=================================
+ media query for hover effect on desktop starts here
+ =================================*/ 
+ @media only screen and (min-width: 995px) {
+  .nav-item:hover {
+    color: #FF0000;
+    transition: all .3s;
+  }
 
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+  .next-btn:hover::before {
+    border-color: #767676;
+    color: #767676;
+    transition: all .4s;
+  }
+
+  .tab-item a:hover {
+    color: #FF0000;
+  }
+
+  .send:hover {
+    background-color: #fff;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+    border-radius: 8px;
+    transition: all .4s;
+  }
+
+  .social-icon:hover::before {
+    border-color: #FF0000;
+    color: #FF0000;
+    transform: scale(1.05);
+    transition: all .4s;
+  }
+ }  
+ /*=================================
+ media query for hover effect on desktop ends here
+=================================*/ 
+ /*=================================
+ media query for 1024px starts here
+=================================*/ 
+@media only screen and (max-width:1024px) {
+  /* .wrapper { padding: 20px 0;} */
+  .tab-list { width: 100%; }
+  .menu-item { flex-basis: 95%; }
 
 
+}
+ /*=================================
+ media query 1024px ends here
+=================================*/ 
+ /*=================================
+ media query 995px starts here
+=================================*/ 
+@media only screen and (max-width:995px) {
+  .banner-heading { font-size: 30px; }
 
-}  
+  .about .wrapper {
+    padding: 15px 0;
+  }
+
+  .about-content .main-heading {
+    margin-bottom: 50px;
+  }
+
+  .about-para { font-size: 22px; }
+}
+ /*=================================
+ media query 995px ends here
+=================================*/ 
+ /*=================================
+ media query 768px starts here
+=================================*/ 
+@media only screen and (max-width:768px) {
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 8px;
+    right: 10px;
+  }
+
+  .hamburger:hover+.nav { right: 0; }
+
+  .nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: -100%;
+    background: #A9A39F;
+    transition: all .3s;
+  }
+
+  .nav-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .hamburger:hover .bar-two { display: none; }
+  .hamburger:hover .bar-one { transform: translateY(3px) rotate(45deg); }
+  .hamburger:hover .bar-three { transform: translateY(-5px) rotate(-45deg); }
+
+  .footer .wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+ /*=================================
+ media query 768px ends here
+=================================*/ 
