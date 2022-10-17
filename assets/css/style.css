@@ -119,7 +119,6 @@ li {
   position: fixed;
   z-index: 1;
   top: 0;
-  background-color: #e9eaec;
 }
 
 .header .wrapper {
@@ -284,10 +283,22 @@ border: 1px solid #000;
 .main-heading {
   padding: 0 0 ;
   margin: 0 0 70px;
+  position: relative;
   color: #767676;
   font-size: 44px;
   text-align: center;
   font-weight: 600;
+}
+
+.main-heading::after {
+  content: "";
+  width: 34%;
+  height: 3px;
+  background-color: #767676;
+  float: right;
+  position: absolute;
+  top: 130%;
+  left: 33%;
 }
 
 .special-img {
@@ -302,6 +313,7 @@ border: 1px solid #000;
 .special-item {
   position: relative;
   display: flex;
+  flex-basis: 16.45%;
   flex-wrap: wrap;
   overflow: hidden;
 }
@@ -318,11 +330,6 @@ border: 1px solid #000;
   align-items: center;
   flex-direction: column;
   color: #686B71;
-}
-
-.special-item:hover .item-content{
-  bottom: 0;
-  transition: all .7s ease-in-out;
 }
 
 .item-name {
@@ -402,6 +409,12 @@ border: 1px solid #000;
   padding: 85px 0;
 }
 
+.menu .main-heading::after {
+  width: 10%;
+  top: 130%;
+  left: 45%;
+}
+
 .tab-list {
   margin-bottom: 60px;
   margin: 0 auto;
@@ -448,12 +461,12 @@ border: 1px solid #000;
   font-size: 20px;
 }
 
-.dotted {
+/* .dotted {
   display: inline-block;
   text-indent: -9999px;
   position: relative;
-}
-
+} */
+/* 
 .dotted::after {
   content: "";
   width: 275px;
@@ -462,7 +475,7 @@ border: 1px solid #000;
   position: absolute;
   top: 20px;
   left: -135px;
-}
+} */
 
 .price {
   display: inline-block;
@@ -478,6 +491,17 @@ border: 1px solid #000;
 /*=================================
   contact styling starts here
 =================================*/
+
+/*=================================
+  contact styling ends here
+=================================*/
+/*=================================
+  main styling ends here
+=================================*/
+/*=================================
+  footer styling starts here
+=================================*/
+
 .contact {
   position: relative;
   display: flex;
@@ -485,18 +509,37 @@ border: 1px solid #000;
 }
 
 .contact .wrapper {
-  padding: 70px 0 35px;
+  padding: 70px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contact-container {
   display: flex;
   justify-content: flex-end;
 }
 
-.contact-list {
+.contact-content {
+  width: 44.5%;
+  margin-bottom: 40px;
+}
+
+.footer-lower {
+  padding: 35px 0;
   display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #fff;
+}
+
+.contact-list {
   margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-item {
-  flex-basis: 46%;
+  flex-basis: 48%;
   color: #767676;
 }
 
@@ -529,7 +572,7 @@ address {
   top: 0;
   left: 0;
   right: 0;
-  bottom: -122px;
+  bottom: 0;
 }
 
 .contact-bg img {
@@ -580,15 +623,7 @@ form {
 .form-input textarea::placeholder {
   font-size: 17px;
 }
-/*=================================
-  contact styling ends here
-=================================*/
-/*=================================
-  main styling ends here
-=================================*/
-/*=================================
-  footer styling starts here
-=================================*/
+
 .footer {
   position: relative;
   bottom: 0;
@@ -657,6 +692,11 @@ form {
     transition: all .3s;
   }
 
+  .special-item:hover .item-content {
+    bottom: 0;
+    transition: all .7s ease-in-out;
+  }
+
   .next-btn:hover::before {
     border-color: #767676;
     color: #767676;
@@ -686,6 +726,21 @@ form {
  media query for hover effect on desktop ends here
 =================================*/ 
  /*=================================
+ media query for 1280px starts here
+=================================*/ 
+@media only screen and (max-width:1024px) {
+  .item-content {
+    font-size: 80%;
+  }
+
+  .item-content .item-name {
+    font-size: 16px;
+  }
+}
+ /*=================================
+ media query for 1280px ends here
+=================================*/ 
+ /*=================================
  media query for 1024px starts here
 =================================*/ 
 @media only screen and (max-width:1024px) {
@@ -704,6 +759,11 @@ form {
 @media only screen and (max-width:995px) {
   .banner-heading { font-size: 30px; }
 
+  .item-content {
+    margin: 12px 0;
+    position: inherit;
+  }
+
   .about .wrapper {
     padding: 15px 0;
   }
@@ -712,7 +772,23 @@ form {
     margin-bottom: 50px;
   }
 
-  .about-para { font-size: 22px; }
+  .about-para { font-size: 21px; }
+
+  .form-input {
+    flex-wrap: wrap;
+  }
+
+  .special-list { gap: 15px; }
+
+  .special-item { flex-basis: 18%; }
+
+  .contact-list {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .contact-item { flex-basis: 100%; }
+  .form-input input { flex-basis: 100%; }
 }
  /*=================================
  media query 995px ends here
@@ -753,6 +829,26 @@ form {
     gap: 40px;
   }
 
+  .turnip-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .turnip .wrapper {
+    padding: 60px 0;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+  
+  .item-para {
+    padding: 15px 0;
+  }
+  .item-anc { font-size: 15px; }
+  .contact-container { justify-content: center; }
+  .contact-content { width: auto; }
+  .next-section { bottom: 10px; }
   .hamburger:hover .bar-two { display: none; }
   .hamburger:hover .bar-one { transform: translateY(3px) rotate(45deg); }
   .hamburger:hover .bar-three { transform: translateY(-5px) rotate(-45deg); }
@@ -765,4 +861,48 @@ form {
 }
  /*=================================
  media query 768px ends here
+=================================*/ 
+ /*=================================
+ media query 480x starts here
+=================================*/
+@media only screen and (max-width:480px) {
+  .turnip-list {
+    flex-direction: column;
+  }
+
+  .dotted {
+    display: none;
+  }
+
+  .special-item { flex-basis: 30%; }
+
+  .footer-lower {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    width: 100% ;
+  }
+
+  .contact-content {
+    width: auto;
+  }
+
+  .banner-heading {
+    width: 80%;
+    padding: 20% 0 25%;
+    text-align: center;
+  }
+
+  .about-para {
+    line-height: 22px;
+    font-style: 16px ;
+  }
+  .contact-container { justify-content: center; }
+  .about-content .main-heading { font-size: 35px; }
+  .about-para { font-size: 16px; }
+ /*=================================
+ media query 480px ends here
 =================================*/ 
